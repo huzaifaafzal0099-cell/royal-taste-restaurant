@@ -1,0 +1,468 @@
+/* RESET */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#0d0d0d;
+color:white;
+overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+z-index:1000;
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 80px;
+background:rgba(0,0,0,.55);
+backdrop-filter:blur(15px);
+}
+
+.logo{
+font-size:32px;
+font-weight:700;
+color:#ffb703;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+}
+
+nav ul li{
+margin-left:35px;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+font-size:18px;
+transition:.3s;
+}
+
+nav ul li a:hover{
+color:#ffb703;
+}
+
+/* HERO */
+
+.hero{
+height:100vh;
+
+background:url("hero.jpg") center center/cover;
+
+display:flex;
+justify-content:center;
+align-items:center;
+position:relative;
+}
+
+.overlay{
+position:absolute;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.60);
+}
+
+.hero-content{
+position:relative;
+text-align:center;
+z-index:2;
+max-width:700px;
+}
+
+.hero h1{
+font-size:72px;
+margin-bottom:20px;
+text-shadow:0 0 20px black;
+}
+
+.hero p{
+font-size:22px;
+margin-bottom:35px;
+line-height:1.7;
+}
+
+.hero button{
+padding:18px 45px;
+font-size:20px;
+border:none;
+border-radius:40px;
+background:#ffb703;
+cursor:pointer;
+transition:.4s;
+font-weight:bold;
+}
+
+.hero button:hover{
+transform:scale(1.1);
+background:white;
+}
+
+/* ABOUT */
+
+.about{
+padding:120px 10%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:70px;
+background:#111;
+}
+
+.about-text{
+flex:1;
+}
+
+.about-text h2{
+font-size:50px;
+margin-bottom:25px;
+color:#ffb703;
+}
+
+.about-text p{
+font-size:19px;
+line-height:1.9;
+margin-bottom:20px;
+}
+
+.about-image{
+flex:1;
+text-align:center;
+}
+
+.about-image img{
+width:100%;
+max-width:500px;
+border-radius:20px;
+box-shadow:0 0 40px rgba(255,183,3,.4);
+}
+
+/* MENU */
+
+.menu{
+padding:120px 8%;
+background:#181818;
+text-align:center;
+}
+
+.menu h2{
+font-size:52px;
+color:#ffb703;
+margin-bottom:70px;
+}
+
+.menu-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:35px;
+}
+
+.food-card{
+background:#222;
+border-radius:18px;
+overflow:hidden;
+transition:.4s;
+}
+
+.food-card:hover{
+transform:translateY(-15px);
+box-shadow:0 0 30px rgba(255,183,3,.4);
+}
+
+.food-card img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.food-card h3{
+margin-top:20px;
+font-size:28px;
+}
+
+.food-card p{
+padding:15px;
+color:#ddd;
+}
+
+.food-card span{
+display:block;
+font-size:24px;
+font-weight:bold;
+color:#ffb703;
+padding-bottom:25px;
+}
+/* ========================= */
+/* CHEF SECTION */
+/* ========================= */
+
+.chef{
+    padding:120px 10%;
+    background:#111;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:70px;
+    flex-wrap:wrap;
+}
+
+.chef img{
+    width:420px;
+    max-width:100%;
+    border-radius:20px;
+    box-shadow:0 0 30px rgba(255,183,3,.4);
+}
+
+.chef div{
+    max-width:550px;
+}
+
+.chef h2{
+    font-size:48px;
+    color:#ffb703;
+    margin-bottom:25px;
+}
+
+.chef p{
+    font-size:18px;
+    line-height:1.9;
+    margin-bottom:30px;
+}
+
+.chef button{
+    padding:16px 35px;
+    border:none;
+    border-radius:40px;
+    background:#ffb703;
+    color:black;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.chef button:hover{
+    transform:scale(1.08);
+    background:white;
+}
+
+/* ========================= */
+/* GALLERY */
+/* ========================= */
+
+.gallery{
+    padding:120px 8%;
+    background:#181818;
+    text-align:center;
+}
+
+.gallery h2{
+    font-size:50px;
+    color:#ffb703;
+    margin-bottom:60px;
+}
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.gallery-grid img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:15px;
+    transition:.4s;
+}
+
+.gallery-grid img:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 25px rgba(255,183,3,.5);
+}
+
+/* ========================= */
+/* REVIEWS */
+/* ========================= */
+
+.reviews{
+    padding:120px 8%;
+    background:#111;
+    text-align:center;
+}
+
+.reviews h2{
+    font-size:50px;
+    color:#ffb703;
+    margin-bottom:60px;
+}
+
+.review-box{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.review{
+    width:320px;
+    background:#222;
+    padding:30px;
+    border-radius:18px;
+    transition:.3s;
+}
+
+.review:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 25px rgba(255,183,3,.4);
+}
+
+.review p{
+    margin:20px 0;
+    line-height:1.8;
+}
+
+.review h4{
+    color:#ffb703;
+}
+
+/* ========================= */
+/* CONTACT */
+/* ========================= */
+
+.contact{
+    padding:120px 10%;
+    background:#181818;
+    text-align:center;
+}
+
+.contact h2{
+    font-size:50px;
+    color:#ffb703;
+    margin-bottom:50px;
+}
+
+.contact form{
+    max-width:700px;
+    margin:auto;
+}
+
+.contact input,
+.contact textarea{
+
+    width:100%;
+    padding:18px;
+    margin:15px 0;
+
+    border:none;
+    border-radius:10px;
+
+    background:#2a2a2a;
+    color:white;
+    font-size:17px;
+}
+
+.contact textarea{
+    height:180px;
+    resize:none;
+}
+
+.contact button{
+    margin-top:20px;
+    padding:18px 45px;
+    border:none;
+    border-radius:40px;
+    background:#ffb703;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.contact button:hover{
+    background:white;
+    transform:scale(1.08);
+}
+
+/* ========================= */
+/* FOOTER */
+/* ========================= */
+
+footer{
+    background:#090909;
+    text-align:center;
+    padding:40px 20px;
+}
+
+.social{
+    margin-bottom:20px;
+}
+
+.social i{
+    font-size:28px;
+    color:#ffb703;
+    margin:0 12px;
+    transition:.3s;
+    cursor:pointer;
+}
+
+.social i:hover{
+    transform:translateY(-8px);
+    color:white;
+}
+
+footer p{
+    color:#bbb;
+    font-size:16px;
+}
+
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
+
+@media(max-width:900px){
+
+nav{
+    padding:20px;
+    flex-direction:column;
+}
+
+nav ul{
+    flex-wrap:wrap;
+    justify-content:center;
+    margin-top:15px;
+}
+
+.hero h1{
+    font-size:45px;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+.about{
+    flex-direction:column;
+}
+
+.chef{
+    flex-direction:column;
+}
+
+}
